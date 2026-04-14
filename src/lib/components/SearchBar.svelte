@@ -55,9 +55,8 @@
 			stroke-linejoin="round"
 			aria-hidden="true"
 		>
-			<circle cx="12" cy="12" r="3" />
-			<path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
-			<path d="m4.93 4.93 2.12 2.12M16.95 16.95l2.12 2.12M19.07 4.93l-2.12 2.12M7.05 16.95l-2.12 2.12" />
+			<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+			<circle cx="12" cy="10" r="3" />
 		</svg>
 	</button>
 
