@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ── Custom font ──────────────────────────────────────────── */
+@font-face {
+	font-family: 'TickingTimebomb';
+	src: url('/fonts/ticking-timebomb-bb.regular.ttf') format('truetype');
+	font-display: swap;
+}
+
+/* ── Design tokens ────────────────────────────────────────── */
+@theme {
+	--color-glass-bg: rgba(0, 0, 0, 0.35);
+	--color-glass-border: rgba(255, 255, 255, 0.12);
+	--blur-glass: 14px;
+
+	--font-family-display: 'TickingTimebomb', sans-serif;
+}
+
+/* ── Base reset ───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	margin: 0;
+	font-family: system-ui, -apple-system, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ── Glass morphism utility ───────────────────────────────── */
+@utility glass {
+	background: rgba(0, 0, 0, 0.35);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@utility glass-light {
+	background: rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Icon animations ──────────────────────────────────────── */
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+@keyframes spin-slow {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes pulse-glow {
+	0%,
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.75;
+		transform: scale(1.05);
+	}
+}
+
+@keyframes loading-bounce {
+	0%,
+	80%,
+	100% {
+		transform: scale(0);
+		opacity: 0.3;
+	}
+	40% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.animate-float {
+	animation: float 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+	animation: spin-slow 12s linear infinite;
+}
+
+.animate-pulse-glow {
+	animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.animate-bounce-dot {
+	animation: loading-bounce 1.4s ease-in-out infinite both;
+}

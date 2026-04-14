@@ -1,0 +1,17 @@
+node_modules
+.svelte-kit
+build
+.vercel
+
+# Environment variables — never commit
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea
